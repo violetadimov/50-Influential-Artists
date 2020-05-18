@@ -1,0 +1,36 @@
+.anchor() {
+    color: @font-color;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: sans-serif;
+    width: 30%;
+    text-align: center;
+
+}
+
+.bg-img() {
+    background-image: url("/assets/home.png");
+    background-size: 200%;
+    background-attachment: local;
+    background-position: center center;
+    height: 600px;
+    
+}
+
+.displayFlex(@direction, @justify) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    
+}
+
+.btn( @align, @size, @style) {
+    width: 20%;
+    height: 9%;
+    align-self: @align;
+    border-radius: 5px;
+    font-size: @size;
+    color: @font-color;
+    background-color: @button-bg;
+    border: 2px @style @darkgrey;
+}

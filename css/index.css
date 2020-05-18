@@ -1,4 +1,251 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  margin: 5% 10%;
+}
+nav {
+  height: 30px;
+  display: flex;
+  margin: 2% 20%;
+  justify-content: center;
+}
+@media ( max-width: 500px )  {
+  nav {
+    height: 20px;
+  }
+  nav a:nth-child(3) {
+    padding-left: 2%;
+  }
+}
+nav a {
+  color: darkslategray;
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: sans-serif;
+  width: 30%;
+  text-align: center;
+}
+@media ( max-width: 500px )  {
+  nav a {
+    height: 20px;
+    font-size: 1.1rem;
+    padding-right: 1%;
+    width: 25%;
+  }
+}
+nav a:nth-child(1) {
+  font-weight: bold;
+}
+nav a:nth-child(2) {
+  border-left: 3px solid grey;
+  border-right: 3px solid grey;
+}
+@media ( max-width: 500px )  {
+  body {
+    margin: 10% 0;
+  }
+}
+header {
+  margin: 2%;
+}
+@media ( max-width: 500px )  {
+  .top-container {
+    margin-top: 5%;
+  }
+}
+.top-container .top-bgcontainer {
+  background-image: url("/assets/home.png");
+  background-size: 200%;
+  background-attachment: local;
+  background-position: center center;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4%;
+}
+@media ( max-width: 500px )  {
+  .top-container .top-bgcontainer {
+    height: 300px;
+    background-size: 220%;
+    margin: 0 0 3% 0;
+  }
+}
+.top-container .top-bgcontainer h1 {
+  width: 100%;
+  align-self: unset;
+  font-size: 4.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 2% 0;
+}
+@media ( max-width: 500px )  {
+  .top-container .top-bgcontainer h1 {
+    font-size: 2.2rem;
+  }
+}
+.top-container .top-bgcontainer button {
+  width: 20%;
+  height: 9%;
+  align-self: center;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: darkslategray;
+  background-color: #FFFFFF;
+  border: 2px solid darkslategray;
+}
+@media ( max-width: 500px )  {
+  .top-container .top-bgcontainer button {
+    font-size: 0.7rem;
+    border: 1px solid darkslategray;
+  }
+}
+.artists-container {
+  display: flex;
+  flex-direction: row;
+  margin: 3% 0;
+}
+@media ( max-width: 500px )  {
+  .artists-container {
+    flex-direction: column;
+    margin: 5% 0;
+  }
+}
+.artists-container .artist {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media ( max-width: 500px )  {
+  .artists-container .artist {
+    padding-top: 2%;
+    width: 100%;
+  }
+}
+.artists-container .artist img {
+  width: 350px;
+  height: 280px;
+  border-radius: 10px;
+}
+@media ( max-width: 500px )  {
+  .artists-container .artist img {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+  }
+}
+.artists-container .artist a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  padding-top: 5%;
+  color: darkslategray;
+}
+@media ( max-width: 500px )  {
+  .artists-container .artist a {
+    font-size: 0.8rem;
+    padding-top: 3%;
+  }
+}
+.artists-container .artist .bio {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 5%;
+}
+@media ( max-width: 500px )  {
+  .artists-container .artist .bio {
+    font-size: 0.5em;
+    padding: 3% 25%;
+  }
+}
