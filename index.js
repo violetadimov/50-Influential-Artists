@@ -221,12 +221,11 @@ console.log(artists[8].name = 'Vincent Van Dough')
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
  */
-function getArtistByIndex(Claude_Monet) {
+function getArtistByIndex(id, name) {
     /* code here */
-    return { 'The artist at index is'
-        $ { Claude_Monet } }
+    return (`The artist at index ${id} is ${name}`)
 }
-// "Claude Monet"
+console.log(getArtistByIndex([3], artists[3].name));
 /**
 
 
@@ -238,20 +237,24 @@ function getArtistByIndex(Claude_Monet) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist( /*code here*/ ) {
-    /* code here */
+function removeArtist(artists, index) {
+    return artists.splice(index, 1);
 }
+console.log(removeArtist(artists, 4));
 
 /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt( /* Code here */ ) {
-
-    /* Code here */
-
+function lotsOfArt(artists) {
+    for (let i = 0; i < artists.length; i++) {
+        if (artists[i].paintings > 100) {
+            console.log(artists[i].name);
+        }
+    }
 }
+console.log(lotsOfArt(artists));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -263,11 +266,14 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist( /* Code here */ ) {
-
-    /* Code here */
+function addArtist(id, name, years, genre, nationality, bio) {
+    return { id, name, years, genre, nationality, bio }
 
 }
+let newArtist = addArtist(20, 'Violeta', '1993 - current day', 'Web Design', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis sapien in molestie blandit. Vestibulum mattis libero eget augue vehicula, ac maximus eros aliquet. Ut consectetur eros ut mi auctor aliquam.');
+// artists.push(addArtist(20, 'Violeta', '1993 - current day', 'Web Design', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis sapien in molestie blandit. Vestibulum mattis libero eget augue vehicula, ac maximus eros aliquet. Ut consectetur eros ut mi auctor aliquam.'));
+artists.push(newArtist);
+console.log(artists);
 
 
 
@@ -277,11 +283,15 @@ function addArtist( /* Code here */ ) {
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s( /* Code here */ ) {
-
-    /* Code here */
+function get20s(artists) {
+    for (i = 0; i < artists.length; i++) {
+        if ((artists[i].years >= 1800) && (artists[i].years <= 1900)) {
+            console.log(artists[i].name);
+        }
+    }
 
 }
+console.log(get20s(artists));
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
